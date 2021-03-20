@@ -1,10 +1,13 @@
 import React from "react";
+import { GlobalStyle } from "./styles/GlobalStyles";
+import Page from "./components/Page/index";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Rocketseat</h1>
-    </div>
+    <>
+      <Page />
+      <GlobalStyle />
+    </>
   );
 }
 
