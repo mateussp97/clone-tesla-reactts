@@ -1,7 +1,9 @@
 import { useCallback, useRef, useState } from "react";
-import { Container } from "./styles";
+import { Container, OverlaysRoot } from "./styles";
+import ModelOverlay from "../ModelOverlay";
 import ModelsContext, { CarModel } from "./../ModelsContext";
 
+//? É responsável por ser o 'Provider' da nossa Context
 const ModelsWrapper: React.FC = ({ children }) => {
   //! Definindo como HTMLDivElement pois 'Container' é uma div
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -51,7 +53,14 @@ const ModelsWrapper: React.FC = ({ children }) => {
         getModelByName,
       }}
     >
-      <Container ref={wrapperRef}>{children}</Container>
+      <Container ref={wrapperRef}>
+        <OverlaysRoot>
+          {registeredModels.map((item) => (
+            <ModelOverlay key={item.modelName}>{item.overlayNode}</ModelOverlay>
+          ))}
+        </OverlaysRoot>
+        {children}
+      </Container>
     </ModelsContext.Provider>
   );
 };
