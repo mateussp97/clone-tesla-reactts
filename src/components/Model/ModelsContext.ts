@@ -3,7 +3,8 @@ import React from "react";
 //! modelName = nome do modelo = cada carro possui seu nome
 //! overlayNode = ReactNode = cada carro tem seu conteúdo e atributos React
 //! sectionRef = referência de um elemento HTML = cada carro tem uma 'section'
-interface CarModel {
+//? Exportando a interface para usar no index.tsx de ModelsWrapper
+export interface CarModel {
   modelName: string;
   overlayNode: React.ReactNode;
   sectionRef: React.RefObject<HTMLElement>;
