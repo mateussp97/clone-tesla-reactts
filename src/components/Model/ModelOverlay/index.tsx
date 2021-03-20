@@ -1,12 +1,9 @@
-import { ReactNode } from "react";
-
+import useWrapperScroll from "../useWrapperScroll";
 import { Container } from "./styles";
 
-interface ModelOverlayProps {
-  children: ReactNode;
-}
-
 const ModelOverlay: React.FC = ({ children }) => {
+  const { scrollY } = useWrapperScroll();
+
   return <Container>{children}</Container>;
 };
 
