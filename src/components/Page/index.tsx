@@ -32,7 +32,7 @@ const Page: React.FC = () => {
           ))}
         </div>
       </ModelsWrapper>
-      <UniqueOverlay></UniqueOverlay>
+      <UniqueOverlay />
     </Container>
   );
 };

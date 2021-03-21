@@ -11,7 +11,7 @@ export default function useWrapperScroll() {
 
   useEffect(() => {
     //! Passa para 'element' a verificação se 'wrapperRef' existe
-    const element = wrapperRef.current;
+    const element = wrapperRef?.current;
 
     if (element) {
       const updateScrollValue = () => {

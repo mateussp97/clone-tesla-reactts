@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { motion } from "framer-motion";
 
 export const Container = styled.div`
   position: sticky;
@@ -31,7 +32,7 @@ export const Burger = styled(GiHamburgerMenu)`
   cursor: pointer;
 `;
 
-export const Footer = styled.footer`
+export const Footer = styled(motion.footer)`
   position: fixed;
   left: 0;
   right: 0;
