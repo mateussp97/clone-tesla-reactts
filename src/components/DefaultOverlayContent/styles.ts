@@ -38,14 +38,13 @@ export const Buttons = styled.div`
   > button {
     background: #1a1720;
     color: #fff;
-    opacity: 0.8;
 
     font-size: 0.875rem;
     font-weight: 500;
     letter-spacing: 0.25rem;
     text-transform: uppercase;
 
-    padding: 0.875rem 2.5rem;
+    padding: 1rem 2.5rem;
     border-radius: 1.5rem;
     border: none;
     outline: none;
@@ -54,8 +53,6 @@ export const Buttons = styled.div`
     &.white {
       color: #1a1720;
       background: #fff;
-
-      opacity: 0.65;
     }
 
     & + button {
@@ -65,7 +62,7 @@ export const Buttons = styled.div`
 
   @media screen and (min-width: 600px) {
     flex-direction: row;
-    margin-bottom: 8rem;
+    margin-bottom: 12rem;
 
     > button + button {
       margin-top: 0rem;
