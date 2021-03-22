@@ -1,3 +1,10 @@
+import { motion } from "framer-motion";
+import {
+  fadeAnimation,
+  titleUpAnimation,
+  leftAnimation,
+  rightAnimation,
+} from "../../animation";
 import { Container, Heading, Buttons } from "./styles";
 
 interface Props {
@@ -9,12 +16,25 @@ const DefaultOverlayContent: React.FC<Props> = ({ label, description }) => {
   return (
     <Container>
       <Heading>
-        <h1>{label}</h1>
-        <h2>{description}</h2>
+        <motion.h1 variants={titleUpAnimation} initial="hidden" animate="show">
+          {label}
+        </motion.h1>
+        <motion.h2 variants={fadeAnimation} initial="hidden" animate="show">
+          {description}
+        </motion.h2>
       </Heading>
       <Buttons>
-        <button>Custom Order</button>
-        <button className="white">Existing Inventory</button>
+        <motion.button variants={leftAnimation} initial="hidden" animate="show">
+          Custom Order
+        </motion.button>
+        <motion.button
+          className="white"
+          variants={rightAnimation}
+          initial="hidden"
+          animate="show"
+        >
+          Existing Inventory
+        </motion.button>
       </Buttons>
     </Container>
   );

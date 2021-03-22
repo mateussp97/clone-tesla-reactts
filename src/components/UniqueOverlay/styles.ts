@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineMenu } from "react-icons/ai";
 import { motion } from "framer-motion";
 
 export const Container = styled.div`
@@ -20,14 +20,41 @@ export const Header = styled.header`
   align-items: center;
   justify-content: space-between;
 
-  padding: 2rem;
+  padding: 1.25rem 1rem;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      margin: 0 0.5rem;
+
+      a {
+        text-transform: uppercase;
+        color: #000;
+        font-size: 0.875rem;
+        font-weight: 600;
+        font-family: "Montserrat", sans-serif;
+        text-decoration: none;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  @media (min-width: 600px) {
+    padding: 1.25rem 2rem;
+  }
 `;
 
-export const Logo = styled.h1``;
+export const Logo = styled.img``;
 
-export const Burger = styled(GiHamburgerMenu)`
-  height: 2rem;
-  width: 2rem;
+export const Burger = styled(AiOutlineMenu)`
+  height: 1.5rem;
+  width: 1.5rem;
 
   cursor: pointer;
 `;
@@ -37,6 +64,8 @@ export const Footer = styled(motion.footer)`
   left: 0;
   right: 0;
   bottom: 0;
+
+  display: block;
 
   padding: 2rem;
 
@@ -55,7 +84,7 @@ export const Footer = styled(motion.footer)`
 
       a {
         text-decoration: none;
-        color: #393c41;
+        color: #fff;
 
         &:hover {
           color: #000;
@@ -65,8 +94,6 @@ export const Footer = styled(motion.footer)`
   }
 
   @media (min-width: 600px) {
-    margin-bottom: 2rem;
-
     ul {
       flex-direction: row;
 

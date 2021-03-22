@@ -14,4 +14,14 @@ export const GlobalStyle = createGlobalStyle`
   ul { 
     list-style-type: none;
   }
+
+  html {
+    @media screen and (max-width: 1080px) {
+      font-size: 93.75%
+    }
+
+    @media screen and (max-width: 720px) {
+      font-size: 87.5%
+    }
+  }
 `;

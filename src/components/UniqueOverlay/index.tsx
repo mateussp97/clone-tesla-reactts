@@ -1,6 +1,7 @@
 import useWrapperScroll from "../Model/useWrapperScroll";
 import { Container, Header, Logo, Burger, Footer } from "./styles";
 import { useTransform } from "framer-motion";
+import logoImg from "../../images/tesla.svg";
 
 const UniqueOverlay: React.FC = () => {
   const { scrollYProgress } = useWrapperScroll();
@@ -10,19 +11,39 @@ const UniqueOverlay: React.FC = () => {
   return (
     <Container>
       <Header>
-        <Logo>Logo</Logo>
+        <Logo src={logoImg} />
+        <ul>
+          <li>
+            <a href="https://github.com/">Model 3</a>
+          </li>
+          <li>
+            <a href="https://github.com/">Model S</a>
+          </li>
+          <li>
+            <a href="https://github.com/">Model W</a>
+          </li>
+          <li>
+            <a href="https://github.com/">Model X</a>
+          </li>
+          <li>
+            <a href="https://github.com/">Roadster</a>
+          </li>
+          <li>
+            <a href="https://github.com/">Truck</a>
+          </li>
+        </ul>
         <Burger />
       </Header>
       <Footer style={{ opacity }}>
         <ul>
           <li>
-            <a href="https://github.com/">UI Clone</a>
+            <a href="https://github.com/">Tesla © 2021</a>
           </li>
           <li>
-            <a href="https://github.com/">UI Clone</a>
+            <a href="https://github.com/">Privacy & Legal</a>
           </li>
           <li>
-            <a href="https://github.com/">UI Clone</a>
+            <a href="https://github.com/">News</a>
           </li>
         </ul>
       </Footer>
