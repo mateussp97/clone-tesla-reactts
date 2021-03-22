@@ -25,7 +25,8 @@ const Page: React.FC = () => {
               overlayNode={
                 <DefaultOverlayContent
                   label={modelName}
-                  description="Order Online for Delivery"
+                  description="Order Online for "
+                  link="Touchless Delivery"
                 />
               }
             />

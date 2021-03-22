@@ -10,9 +10,14 @@ import { Container, Heading, Buttons } from "./styles";
 interface Props {
   label: string;
   description: string;
+  link: string;
 }
 
-const DefaultOverlayContent: React.FC<Props> = ({ label, description }) => {
+const DefaultOverlayContent: React.FC<Props> = ({
+  label,
+  description,
+  link,
+}) => {
   return (
     <Container>
       <Heading>
@@ -21,6 +26,7 @@ const DefaultOverlayContent: React.FC<Props> = ({ label, description }) => {
         </motion.h1>
         <motion.h2 variants={fadeAnimation} initial="hidden" animate="show">
           {description}
+          <span>{link}</span>
         </motion.h2>
       </Heading>
       <Buttons>
