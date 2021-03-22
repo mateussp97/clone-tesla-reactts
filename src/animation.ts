@@ -7,7 +7,7 @@ export const titleUpAnimation = {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.75,
+      duration: 0.5,
       ease: "easeOut",
       delay: 0.75,
     },
@@ -20,7 +20,7 @@ export const fadeAnimation = {
   },
   show: {
     opacity: 1,
-    transition: { duration: 1, ease: "easeOut", delay: 1.25 },
+    transition: { duration: 0.75, ease: "easeOut", delay: 1.25 },
   },
 };
 
@@ -33,7 +33,7 @@ export const leftAnimation = {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 0.75,
+      duration: 0.5,
       ease: "easeOut",
       delay: 1.5,
     },
