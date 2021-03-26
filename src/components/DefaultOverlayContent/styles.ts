@@ -48,12 +48,10 @@ export const Buttons = styled.div`
 
   opacity: 0.875;
 
-  padding: 0 16px;
-
-  margin-bottom: 3.5rem;
+  margin: 0 auto 9rem;
 
   > button {
-    width: 100%;
+    width: 280px;
     background: #333438;
     color: #fff;
 
