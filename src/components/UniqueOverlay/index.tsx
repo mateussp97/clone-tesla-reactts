@@ -1,12 +1,12 @@
-import useWrapperScroll from "../Model/useWrapperScroll";
+// import useWrapperScroll from "../Model/useWrapperScroll";
 import { Container, Header, Logo, Burger, Footer } from "./styles";
-import { useTransform } from "framer-motion";
+// import { useTransform } from "framer-motion";
 import logoImg from "../../images/tesla.svg";
 
 const UniqueOverlay: React.FC = () => {
-  const { scrollYProgress } = useWrapperScroll();
+  // const { scrollYProgress } = useWrapperScroll();
 
-  const opacity = useTransform(scrollYProgress, [0.9, 1], [0, 1]);
+  // const opacity = useTransform(scrollYProgress, [0.9, 1], [0, 1]);
 
   return (
     <Container>
@@ -34,7 +34,7 @@ const UniqueOverlay: React.FC = () => {
         </ul>
         <Burger />
       </Header>
-      <Footer style={{ opacity }}>
+      <Footer>
         <ul>
           <li>
             <a href="https://github.com/">Tesla © 2021</a>
