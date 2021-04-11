@@ -1,12 +1,18 @@
-import { useCallback, useRef, useState } from "react";
-import { Container, OverlaysRoot } from "./styles";
-import ModelOverlay from "../ModelOverlay";
-import ModelsContext, { CarModel } from "./../ModelsContext";
+import { useCallback, useRef, useState } from 'react';
+import { Container, OverlaysRoot } from './styles';
+import ModelOverlay from '../ModelOverlay';
+import ModelsContext, { CarModel } from './../ModelsContext';
+
+let containerRef: HTMLDivElement | null = null;
+
+export function getContainerRef() {
+  return containerRef;
+}
 
 //? É responsável por ser o 'Provider' da nossa Context
 const ModelsWrapper: React.FC = ({ children }) => {
   //! Definindo como HTMLDivElement pois 'Container' é uma div
-  const wrapperRef = useRef<HTMLDivElement>(null);
+  const wrapperRef = useRef<HTMLDivElement | null>(null);
 
   //! Definindo o estado 'registeredModels' da contextAPI e tipando como 'CarModel'
   const [registeredModels, setRegisteredModels] = useState<CarModel[]>([]);
@@ -53,7 +59,12 @@ const ModelsWrapper: React.FC = ({ children }) => {
         getModelByName,
       }}
     >
-      <Container ref={wrapperRef}>
+      <Container
+        ref={(ref) => {
+          containerRef = ref;
+          wrapperRef.current = ref;
+        }}
+      >
         <OverlaysRoot>
           {registeredModels.map((item) => (
             <ModelOverlay key={item.modelName} model={item}>
