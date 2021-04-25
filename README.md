@@ -1,4 +1,4 @@
-# UI Clone Twitter
+# UI Clone Tesla
 
 ## About the project
 
